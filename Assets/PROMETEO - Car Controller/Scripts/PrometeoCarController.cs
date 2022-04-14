@@ -431,6 +431,7 @@ public class PrometeoCarController : MonoBehaviour
       var steeringAngle = steeringAxis * maxSteeringAngle;
       frontLeftCollider.steerAngle = Mathf.Lerp(frontLeftCollider.steerAngle, steeringAngle, steeringSpeed);
       frontRightCollider.steerAngle = Mathf.Lerp(frontRightCollider.steerAngle, steeringAngle, steeringSpeed);
+     
     }
 
     //The following method turns the front car wheels to the right. The speed of this movement will depend on the steeringSpeed variable.
@@ -442,6 +443,7 @@ public class PrometeoCarController : MonoBehaviour
       var steeringAngle = steeringAxis * maxSteeringAngle;
       frontLeftCollider.steerAngle = Mathf.Lerp(frontLeftCollider.steerAngle, steeringAngle, steeringSpeed);
       frontRightCollider.steerAngle = Mathf.Lerp(frontRightCollider.steerAngle, steeringAngle, steeringSpeed);
+
     }
 
     //The following method takes the front car wheels to their default position (rotation = 0). The speed of this movement will depend
@@ -496,7 +498,7 @@ public class PrometeoCarController : MonoBehaviour
     //
 
     // This method apply positive torque to the wheels in order to go forward.
-    public void GoForward(){
+    public void GoForwar d(){
       //If the forces aplied to the rigidbody in the 'x' asis are greater than
       //3f, it means that the car is losing traction, then the car will start emitting particle systems.
       if(Mathf.Abs(localVelocityX) > 2.5f){
