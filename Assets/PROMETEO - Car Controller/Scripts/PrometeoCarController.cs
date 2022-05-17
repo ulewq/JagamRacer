@@ -22,8 +22,8 @@ public class PrometeoCarController : MonoBehaviour
       [Space(20)]
       //[Header("CAR SETUP")]
       [Space(10)]
-      [Range(20, 190)]
-      public int maxSpeed = 90; //The maximum speed that the car can reach in km/h.
+      [Range(20, 300)]
+      public int maxSpeed = 300; //The maximum speed that the car can reach in km/h.
       [Range(10, 120)]
       public int maxReverseSpeed = 45; //The maximum speed that the car can reach while going on reverse in km/h.
       [Range(1, 10)]
@@ -498,7 +498,7 @@ public class PrometeoCarController : MonoBehaviour
     //
 
     // This method apply positive torque to the wheels in order to go forward.
-    public void GoForwar d(){
+    public void GoForward(){
       //If the forces aplied to the rigidbody in the 'x' asis are greater than
       //3f, it means that the car is losing traction, then the car will start emitting particle systems.
       if(Mathf.Abs(localVelocityX) > 2.5f){
