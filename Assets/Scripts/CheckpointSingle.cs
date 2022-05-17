@@ -7,7 +7,8 @@ public class CheckpointSingle : MonoBehaviour
     private TrackCheckpoints trackCheckpoints;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        Debug.Log(other.name);
+        if (other.CompareTag("Player")==true)
         {
             trackCheckpoints.PlayerThroughCheckpoint(this);
         }

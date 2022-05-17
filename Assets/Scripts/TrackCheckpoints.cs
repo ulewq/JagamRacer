@@ -23,15 +23,19 @@ public class TrackCheckpoints : MonoBehaviour
     }
     public void PlayerThroughCheckpoint(CheckpointSingle checkpointSingle)
     {
+        
         if (checkpointSingleList.IndexOf(checkpointSingle)==nextCheckpointSingleIndex)
         {
+            Debug.Log("Zesrales sie w ifie");
             nextCheckpointSingleIndex = (nextCheckpointSingleIndex + 1) % checkpointSingleList.Count;
-            OnPlayerCorrectCheckpoint?.Invoke(this, EventArgs.Empty);
+            //OnPlayerCorrectCheckpoint?.Invoke(this, EventArgs.Empty);
         }
         else 
         {
-            OnPlayerWrongCheckpoint?.Invoke(this, EventArgs.Empty);
+            Debug.Log("Zesrales sie ale w elsie");
+
+            //OnPlayerWrongCheckpoint?.Invoke(this, EventArgs.Empty);
         }
-        
+
     }
 }
