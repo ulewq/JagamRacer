@@ -4,38 +4,51 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TrackCheckpoints : MonoBehaviour
+{ 
+public event EventHandler<CarCheckpointEventArgs> OnPlayerCorrectCheckpoint;
+public event EventHandler<CarCheckpointEventArgs> OnPlayerWrongCheckpoint;
+private List<CheckpointSingle> checkpointSingleList;
+private int nextCheckpointIndex;
+
+public class CarCheckpointEventArgs : EventArgs
 {
-    public event EventHandler OnPlayerCorrectCheckpoint;
-    public event EventHandler OnPlayerWrongCheckpoint;
-    private List<CheckpointSingle> checkpointSingleList;
-    private int nextCheckpointSingleIndex;
+    public Transform carTransform;
+}
 
-    private void Awake()
+private void Awake()
+{
+    Transform checkpointsTransform = transform.Find("Checkpoints");
+    checkpointSingleList = new List<CheckpointSingle>();
+    foreach (Transform checkpointSingleTransform in checkpointsTransform)
     {
-        Transform checkpointsTransform = transform.Find("Checkpoints");
-
-        foreach (Transform checkpointSingleTransform in checkpointsTransform)
-        {
-            CheckpointSingle checkpointsingle = checkpointSingleTransform.GetComponent<CheckpointSingle>();
-            checkpointsingle.SetTrackCheckpoints(this);
-        }
-        nextCheckpointSingleIndex = 0;
+        CheckpointSingle checkpointSingle = checkpointSingleTransform.GetComponent<CheckpointSingle>();
+        checkpointSingle.SetTrackCheckpoints(this);
+        checkpointSingleList.Add(checkpointSingle);
     }
-    public void PlayerThroughCheckpoint(CheckpointSingle checkpointSingle)
+    nextCheckpointIndex = 0;
+}
+
+public void PlayerThroughCheckpoint(CheckpointSingle checkpointSingle, Transform playerTransform)
+{
+    if (checkpointSingleList.IndexOf(checkpointSingle) == nextCheckpointIndex)
     {
-        
-        if (checkpointSingleList.IndexOf(checkpointSingle)==nextCheckpointSingleIndex)
-        {
-            Debug.Log("Zesrales sie w ifie");
-            nextCheckpointSingleIndex = (nextCheckpointSingleIndex + 1) % checkpointSingleList.Count;
-            //OnPlayerCorrectCheckpoint?.Invoke(this, EventArgs.Empty);
-        }
-        else 
-        {
-            Debug.Log("Zesrales sie ale w elsie");
-
-            //OnPlayerWrongCheckpoint?.Invoke(this, EventArgs.Empty);
-        }
-
+        nextCheckpointIndex = (nextCheckpointIndex + 1) % checkpointSingleList.Count;
+        OnPlayerCorrectCheckpoint?.Invoke(this, new CarCheckpointEventArgs { carTransform = playerTransform });
+    }
+    else
+    {
+        OnPlayerWrongCheckpoint?.Invoke(this, new CarCheckpointEventArgs { carTransform = playerTransform });
     }
 }
+
+public void ResetCheckpoints()
+{
+    nextCheckpointIndex = 0;
+}
+
+public CheckpointSingle GetNextCheckpoint(Transform transform)
+{
+    return checkpointSingleList[nextCheckpointIndex];
+}
+}
+
