@@ -5,15 +5,15 @@ using UnityEngine;
 public class CheckpointSingle : MonoBehaviour
 {
     private TrackCheckpoints trackCheckpoints;
+
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
-        if (other.CompareTag("Player")==true)
+        if (other.TryGetComponent<Player>(out Player player))
         {
-            trackCheckpoints.PlayerThroughCheckpoint(this);
+            trackCheckpoints.PlayerThroughCheckpoint(this, other.transform);
         }
-    
     }
+
     public void SetTrackCheckpoints(TrackCheckpoints trackCheckpoints)
     {
         this.trackCheckpoints = trackCheckpoints;
