@@ -1,0 +1,56 @@
+{
+    "CarDriver": {
+        "checkpoints": [
+            {
+                "steps": 499794,
+                "file_path": "results\\AgentFirst\\CarDriver\\CarDriver-499794.onnx",
+                "reward": 0.0,
+                "creation_time": 1653403689.4820096,
+                "auxillary_file_paths": [
+                    "results\\AgentFirst\\CarDriver\\CarDriver-499794.pt"
+                ]
+            },
+            {
+                "steps": 999582,
+                "file_path": "results\\AgentFirst\\CarDriver\\CarDriver-999582.onnx",
+                "reward": -2.0,
+                "creation_time": 1653404760.5740306,
+                "auxillary_file_paths": [
+                    "results\\AgentFirst\\CarDriver\\CarDriver-999582.pt"
+                ]
+            },
+            {
+                "steps": 1499164,
+                "file_path": "results\\AgentFirst\\CarDriver\\CarDriver-1499164.onnx",
+                "reward": 0.0,
+                "creation_time": 1653405797.4806194,
+                "auxillary_file_paths": [
+                    "results\\AgentFirst\\CarDriver\\CarDriver-1499164.pt"
+                ]
+            },
+            {
+                "steps": 1918752,
+                "file_path": "results\\AgentFirst\\CarDriver\\CarDriver-1918752.onnx",
+                "reward": -0.3249999980131785,
+                "creation_time": 1653406720.4398196,
+                "auxillary_file_paths": [
+                    "results\\AgentFirst\\CarDriver\\CarDriver-1918752.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1918752,
+            "file_path": "results\\AgentFirst\\CarDriver.onnx",
+            "reward": -0.3249999980131785,
+            "creation_time": 1653406720.4398196,
+            "auxillary_file_paths": [
+                "results\\AgentFirst\\CarDriver\\CarDriver-1918752.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "1.11.0+cpu"
+    }
+}

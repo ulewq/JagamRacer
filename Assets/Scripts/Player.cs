@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private float moveSpeed = 50.0f;
-    private float turnSpeed = 50.0f;
+    private float moveSpeed = 5.0f;
+    private float turnSpeed = 5.0f;
 
     // Update is called once per frame
     void Update()
