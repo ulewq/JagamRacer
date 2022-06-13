@@ -2,8 +2,8 @@ behaviors:
   CarDriver:
     trainer_type: ppo
     hyperparameters:
-      batch_size: 120
-      buffer_size: 12000
+      batch_size: 256
+      buffer_size: 10240
       learning_rate: 0.0003
       beta: 0.001
       epsilon: 0.2
@@ -20,6 +20,9 @@ behaviors:
         gamma: 0.99
         strength: 1.0
     keep_checkpoints: 5
+    behavioral_cloning:
+      strength: 0.5
+      demo_path: E:\pliki z d\Unity\JagamRacer\Demo\DemoRun.demo
     max_steps: 500000000
     time_horizon: 1000
     summary_freq: 12000

@@ -13,6 +13,7 @@ public class CarAgent : Agent
 
     private void Start()
     {
+       
         player = GetComponent<Player>();
         trackCheckpoints.OnPlayerCorrectCheckpoint += TrackCheckpoints_OnPlayerCorrectCheckpoint;
         trackCheckpoints.OnPlayerWrongCheckpoint += TrackCheckpoints_OnPlayerWrongCheckpoint;
@@ -23,6 +24,7 @@ public class CarAgent : Agent
         if (e.carTransform)
         {
             AddReward(+1f);
+            Debug.Log("Punkt dodatni");
         }
     }
 
@@ -31,6 +33,7 @@ public class CarAgent : Agent
         if (e.carTransform)
         {
             AddReward(-1f);
+            Debug.Log("Punkt odjety");
         }
     }
 
@@ -88,20 +91,46 @@ public class CarAgent : Agent
         actionsOut[0] = forwardAction;
         actionsOut[1] = turnAction;
     }
-
+    
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.TryGetComponent<Wall>(out Wall wall))
         {
+            Debug.Log(collision.gameObject.name + "Punkt odjety wall");
+
             AddReward(-0.5f);
         }
+        /*
+        if (collision.gameObject.TryGetComponent<Plane>(out Plane Plane))
+        {
+            gameObject.transform.position = spawnTransform.position + new Vector3(Random.Range(-5f, +5f), 0f, Random.Range(-5f, +5f));
+            AddReward(-0.2f);
+            Debug.Log("KURWA" + gameObject.name);
+        }
+        */
     }
-
+    
     public void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.TryGetComponent<Wall>(out Wall wall))
         {
+            Debug.Log(collision.gameObject.name + "Punkt odjety wall");
+
             AddReward(-0.1f);
         }
     }
+
+    
+    public void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.TryGetComponent<Wall>(out Wall wall))
+        {
+            Debug.Log(collision.gameObject.name + "Punkt odjety Wall");
+
+            AddReward(-0.5f);
+        }
+    }
+   
+
+
 }

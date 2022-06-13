@@ -1,0 +1,29 @@
+{
+    "CarDriver": {
+        "checkpoints": [
+            {
+                "steps": 353735,
+                "file_path": "results\\Sobota1830\\CarDriver\\CarDriver-353735.onnx",
+                "reward": 0.0,
+                "creation_time": 1654965805.3226163
+            },
+            {
+                "steps": 453335,
+                "file_path": "results\\Sobota1830\\CarDriver\\CarDriver-453335.onnx",
+                "reward": null,
+                "creation_time": 1654966046.53239
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 453335,
+            "file_path": "results\\Sobota1830\\CarDriver.onnx",
+            "reward": null,
+            "creation_time": 1654966046.53239
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.2.0",
+        "mlagents_version": "0.25.1",
+        "torch_version": "1.11.0+cpu"
+    }
+}

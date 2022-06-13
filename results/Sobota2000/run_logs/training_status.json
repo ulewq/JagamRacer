@@ -1,0 +1,23 @@
+{
+    "CarDriver": {
+        "checkpoints": [
+            {
+                "steps": 3600,
+                "file_path": "results\\Sobota2000\\CarDriver\\CarDriver-3600.onnx",
+                "reward": -2.0,
+                "creation_time": 1654970575.5538008
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3600,
+            "file_path": "results\\Sobota2000\\CarDriver.onnx",
+            "reward": -2.0,
+            "creation_time": 1654970575.5538008
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.2.0",
+        "mlagents_version": "0.25.1",
+        "torch_version": "1.11.0+cpu"
+    }
+}

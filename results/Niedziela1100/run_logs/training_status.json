@@ -1,0 +1,23 @@
+{
+    "CarDriver": {
+        "checkpoints": [
+            {
+                "steps": 472800,
+                "file_path": "results\\Niedziela1100\\CarDriver\\CarDriver-472800.onnx",
+                "reward": -1.0,
+                "creation_time": 1655028419.8462665
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 472800,
+            "file_path": "results\\Niedziela1100\\CarDriver.onnx",
+            "reward": -1.0,
+            "creation_time": 1655028419.8462665
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.2.0",
+        "mlagents_version": "0.25.1",
+        "torch_version": "1.11.0+cpu"
+    }
+}

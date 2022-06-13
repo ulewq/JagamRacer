@@ -1,0 +1,70 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1655024876",
+        "python_version": "3.8.6 (tags/v3.8.6:db45529, Sep 23 2020, 15:52:53) [MSC v.1927 64 bit (AMD64)]",
+        "command_line_arguments": "E:\\pyTorch\\env\\Scripts\\mlagents-learn CarDriver.yaml --run-id=Niedziela1100demorun0 --resume",
+        "mlagents_version": "0.25.1",
+        "mlagents_envs_version": "0.25.1",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.11.0+cpu",
+        "numpy_version": "1.22.3",
+        "end_time_seconds": "1655024882"
+    },
+    "total": 6.3714164,
+    "count": 1,
+    "self": 0.02134420000000059,
+    "children": {
+        "run_training.setup": {
+            "total": 0.09053900000000004,
+            "count": 1,
+            "self": 0.09053900000000004
+        },
+        "TrainerController.start_learning": {
+            "total": 6.2595332,
+            "count": 1,
+            "self": 8.999999999925734e-05,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 6.258293,
+                    "count": 1,
+                    "self": 4.512243000000001,
+                    "children": {
+                        "demo_to_buffer": {
+                            "total": 1.7460499999999994,
+                            "count": 1,
+                            "self": 1.809999999924372e-05,
+                            "children": {
+                                "load_demonstration": {
+                                    "total": 1.7460319000000002,
+                                    "count": 1,
+                                    "self": 1.7151515000000002,
+                                    "children": {
+                                        "read_file": {
+                                            "total": 0.03088040000000003,
+                                            "count": 1,
+                                            "self": 0.03088040000000003
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "TrainerController._save_models": {
+                    "total": 0.0011502000000005452,
+                    "count": 1,
+                    "self": 0.0004566000000005843,
+                    "children": {
+                        "RLTrainer._checkpoint": {
+                            "total": 0.0006935999999999609,
+                            "count": 1,
+                            "self": 0.0006935999999999609
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

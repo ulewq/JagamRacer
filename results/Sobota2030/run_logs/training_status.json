@@ -1,0 +1,47 @@
+{
+    "CarDriver": {
+        "checkpoints": [
+            {
+                "steps": 27600,
+                "file_path": "results\\Sobota2030\\CarDriver\\CarDriver-27600.onnx",
+                "reward": -27.383336385091145,
+                "creation_time": 1654976305.4654512
+            },
+            {
+                "steps": 28800,
+                "file_path": "results\\Sobota2030\\CarDriver\\CarDriver-28800.onnx",
+                "reward": -51.0,
+                "creation_time": 1655023762.7288535
+            },
+            {
+                "steps": 39600,
+                "file_path": "results\\Sobota2030\\CarDriver\\CarDriver-39600.onnx",
+                "reward": -1.2000000476837158,
+                "creation_time": 1655023857.2135336
+            },
+            {
+                "steps": 105600,
+                "file_path": "results\\Sobota2030\\CarDriver\\CarDriver-105600.onnx",
+                "reward": -7.790000009536743,
+                "creation_time": 1655024159.2652006
+            },
+            {
+                "steps": 129600,
+                "file_path": "results\\Sobota2030\\CarDriver\\CarDriver-129600.onnx",
+                "reward": -39.666666666666664,
+                "creation_time": 1655024342.886321
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 129600,
+            "file_path": "results\\Sobota2030\\CarDriver.onnx",
+            "reward": -39.666666666666664,
+            "creation_time": 1655024342.886321
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.2.0",
+        "mlagents_version": "0.25.1",
+        "torch_version": "1.11.0+cpu"
+    }
+}
