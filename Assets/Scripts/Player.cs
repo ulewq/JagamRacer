@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField]
     private float moveSpeed = 10.0f;
     private float turnSpeed = 30.0f;
 
@@ -24,14 +25,15 @@ public class Player : MonoBehaviour
     void Update()
     {
      
-        vertical = Input.GetAxis("Vertical");
-        horizontal = Input.GetAxis("Horizontal");
-
-        SetInputs(vertical, horizontal );
+        
     }
     private void FixedUpdate()
     {
         rb.velocity = inputVector;
+        vertical = Input.GetAxis("Vertical");
+        horizontal = Input.GetAxis("Horizontal");
+
+        SetInputs(vertical, horizontal);
     }
 
     public void SetInputs(float forwardAmount, float turnAmount)

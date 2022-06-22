@@ -2,41 +2,41 @@
     "CarDriver": {
         "checkpoints": [
             {
-                "steps": 2146651,
-                "file_path": "results\\Niedziela1200\\CarDriver\\CarDriver-2146651.onnx",
+                "steps": 3449251,
+                "file_path": "results\\Niedziela1200\\CarDriver\\CarDriver-3449251.onnx",
                 "reward": null,
-                "creation_time": 1655127675.6597753
+                "creation_time": 1655288687.205557
             },
             {
-                "steps": 2499651,
-                "file_path": "results\\Niedziela1200\\CarDriver\\CarDriver-2499651.onnx",
-                "reward": null,
-                "creation_time": 1655130736.9511123
+                "steps": 3458851,
+                "file_path": "results\\Niedziela1200\\CarDriver\\CarDriver-3458851.onnx",
+                "reward": 29.75,
+                "creation_time": 1655288788.0311534
             },
             {
-                "steps": 2581651,
-                "file_path": "results\\Niedziela1200\\CarDriver\\CarDriver-2581651.onnx",
-                "reward": 84.0,
-                "creation_time": 1655131516.2385287
+                "steps": 3466851,
+                "file_path": "results\\Niedziela1200\\CarDriver\\CarDriver-3466851.onnx",
+                "reward": 92.75,
+                "creation_time": 1655291141.8398588
             },
             {
-                "steps": 2999651,
-                "file_path": "results\\Niedziela1200\\CarDriver\\CarDriver-2999651.onnx",
-                "reward": null,
-                "creation_time": 1655137534.1973817
+                "steps": 3499651,
+                "file_path": "results\\Niedziela1200\\CarDriver\\CarDriver-3499651.onnx",
+                "reward": 93.5,
+                "creation_time": 1655291590.3684418
             },
             {
-                "steps": 3416651,
-                "file_path": "results\\Niedziela1200\\CarDriver\\CarDriver-3416651.onnx",
-                "reward": 92.0,
-                "creation_time": 1655141434.552799
+                "steps": 3522051,
+                "file_path": "results\\Niedziela1200\\CarDriver\\CarDriver-3522051.onnx",
+                "reward": 93.375,
+                "creation_time": 1655291843.0441678
             }
         ],
         "final_checkpoint": {
-            "steps": 3416651,
+            "steps": 3522051,
             "file_path": "results\\Niedziela1200\\CarDriver.onnx",
-            "reward": 92.0,
-            "creation_time": 1655141434.552799
+            "reward": 93.375,
+            "creation_time": 1655291843.0441678
         }
     },
     "metadata": {

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TrackCheckpoints : MonoBehaviour
 { 
@@ -9,14 +10,19 @@ public event EventHandler<CarCheckpointEventArgs> OnPlayerCorrectCheckpoint;
 public event EventHandler<CarCheckpointEventArgs> OnPlayerWrongCheckpoint;
 private List<CheckpointSingle> checkpointSingleList;
 private int nextCheckpointIndex;
+private int winCondition;
 
-public class CarCheckpointEventArgs : EventArgs
+
+    public class CarCheckpointEventArgs : EventArgs
 {
     public Transform carTransform;
 }
 
+
 private void Awake()
 {
+    
+
     Transform checkpointsTransform = transform.Find("Checkpoints");
     checkpointSingleList = new List<CheckpointSingle>();
     foreach (Transform checkpointSingleTransform in checkpointsTransform)
@@ -43,6 +49,7 @@ public void PlayerThroughCheckpoint(CheckpointSingle checkpointSingle, Transform
 
 public void ResetCheckpoints()
 {
+      
     nextCheckpointIndex = 0;
 }
 
